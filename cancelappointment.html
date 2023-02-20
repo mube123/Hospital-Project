@@ -1,0 +1,187 @@
+
+<html lang="en">
+<head>
+  <title>Cancel Appointment</title>
+
+<! -- builtin css libraries used for page partition -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+   
+    	
+<style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 550px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+ 
+   .rowe{
+      width: 100%;
+      text-align:left;
+      position: relative;
+      left: 10px;
+   }
+   .rowe input, .rowe select{
+      position:absolute;
+      left:30%;
+   }
+
+#look{
+       display:none;
+   }
+
+   /*Search button */
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 13px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: right;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+
+
+  </style>   
+<script>
+function myFunction1() {
+  confirm("Are you sure you want to cancel the appointment");
+}
+</script>
+  
+</head>
+<body style="background-image:url('background.jpg'); background-repeat:no-repeat; background-size: 100%, 100%;">
+
+<! -- dashboard side buttons-->
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav hidden-xs">
+        <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="clientdashboard.html">Dashboard</a></li>
+        <li><a href="#section2">Our Staff</a></li>
+        <li><a href="#section3">Our Aim</a></li>
+        <li><a href="bookanappointment.html">Book an appointment</a></li>
+        <li><a href="#section3">Cancel an appointment</a></li>
+        <li><a href="#section2">Pharmacy</a></li>
+        <li><a href="#section3">Facilities</a></li>
+        <li><a href="#section3">Charges</a></li>
+        <li><a href="#section3">Gallery</a></li>
+      </ul><br>
+    </div>
+    <br>
+    
+    <div class="col-sm-9">
+      <div class="well">
+<img src="logo.jpg" height="50px" width="50px" alt=”site’s logo”; align="right";>        
+<h4><b>SHIFA INTERNATIONAL HOSPITAL</b></h4>
+        <p>Lahore, Pakistan</p>
+      </div>
+      
+<div class="row">
+        <div class="col-sm-7">
+          <div class="well">
+            <h4><b>CANCEL YOUR APPOINTMENT</b></h4>
+   <br/>
+<div class="rowe">
+    <label for="patientid">Search by Patient ID:</label>
+      <input type="text" placeholder="Search.." name="search2">
+      <button type="submit" style="margin-left:36%;height:4.75%"><i class="fa fa-search"></i></button>
+ </div>   <br/>
+    <div class="rowe">
+<! -- Input data type  -->
+<label > Name :</label>
+    <input type="text" id="name" name="entername" maxlength="50" style="width:60%"; display: inline-block; text-align:center; value="Sara" readonly "> 
+</div>
+<br/> 
+
+
+<div class="rowe">
+    <label  for="mobile"> CNIC: </label>
+<input type="email" id="email" name="email" maxlength="50" style="width:60%" ;display: inline-block; text-align:center"; value="03003-3456789-0" readonly ">
+</div>
+<br/>
+
+
+<div class="rowe">
+    <label  for="mobile"> Mobile Number: </label>
+<input type="email" id="email" name="email" maxlength="50" style="width:60%" ;display: inline-block; text-align:center"; value="0300-0677000" readonly ">
+</div>
+<br/>
+
+
+<div class="rowe">
+      <label> Email:</label> 
+	
+	<input type="email" id="email" name="email" maxlength="50" style="width:60%" ;display: inline-block; text-align:center"; value="username@domain.com" readonly "> 
+</div>
+<br>
+ <div class="rowe">
+    <label for="Date/Day">Select Date/ Day</label>
+    <input type="email" id="email" name="email" maxlength="50" style="width:60%" ;display: inline-block; text-align:center"; value="Monday, 19 September 2022" readonly "> 
+ </div>
+ <br/>
+  <div class="rowe">
+   <label for="Time">Select Time</label>
+   <input type="email" id="email" name="email" maxlength="50" style="width:60%" ;display: inline-block; text-align:center"; value="4:00 to  4:15" readonly ">
+ </div> <br/>
+<br>
+</form>
+<! -- Buttons -->
+<center>
+<button type="button" onclick=myFunction1()>Cancel Appointment</button>
+&nbsp;&nbsp;&nbsp;<button onclick="document.location.href='clientdashboard.html'">Return to Homepage</button>
+</div>
+</center>
+</div>
+               
+        <div class="col-sm-5">
+          <div class="well">
+            <h4>Contact us</h4>
+            <p>042-37678677<br/>
+	042-37678678<br/>
+	042-37678679<br/> </p>
+	<h4>Email: </h4>
+	<p>customercare@shifainternational.com.pk</p>
+	<h4>Website: </h4>
+	<p>www.shifainteranational.com.pk<br/></p>
+	<h4>Instagram:</h4>
+	<p>shifainteranational<br/></p>
+	<h4>Facebook</h4>
+	<p>shifainteranational<br/></p>
+          </div>
+        </div>
+      </div>
+
+    
+  
+
+</body>
+</html>

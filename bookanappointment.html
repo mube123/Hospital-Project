@@ -1,0 +1,190 @@
+<html lang="en">
+<head>
+  <title>Book an Appointment</title>
+
+<! -- builtin css libraries used for page partition -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+ 
+    
+    	
+<! -- Javascript unhide button -->
+	<script> 
+	function myFunction() {
+ 	var x = document.getElementById("look");
+ 	if (x.style.display == "" || x.style.display == "none") {
+    	x.style.display = "block";
+  	} else {
+    	x.style.display = "none";
+ 	 }
+	}
+</script>
+<style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 550px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+ 
+   .rowe{
+      width: 100%;
+      text-align:left;
+      position: relative;
+      left: 10px;
+   }
+   .rowe input, .rowe select{
+      position:absolute;
+      left:30%;
+   }
+
+#look{
+       display:none;
+   }
+  </style>   
+
+
+  
+</head>
+<body style="background-image:url('background.jpg'); background-repeat:no-repeat; background-size: 100%, 100%;">
+
+<! -- dashboard side buttons-->
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav hidden-xs">
+        <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="clientdashboard.html">Dashboard</a></li>
+        <li><a href="#section2">Our Staff</a></li>
+        <li><a href="#section3">Our Aim</a></li>
+        <li><a href="bookanappointment.html">Book an appointment</a></li>
+        <li><a href="cancelappointment.html">Cancel an appointment</a></li>
+        <li><a href="#section2">Pharmacy</a></li>
+        <li><a href="#section3">Facilities</a></li>
+        <li><a href="#section3">Charges</a></li>
+        <li><a href="#section3">Gallery</a></li>
+      </ul><br>
+    </div>
+    <br>
+    
+    <div class="col-sm-9">
+      <div class="well">
+        <img src="logo.jpg" height="50px" width="50px" alt=”site’s logo”; align="right";>
+	<h4><b>SHIFA INTERNATIONAL HOSPITAL</b></h4>
+        <p>Lahore, Pakistan</p>
+      </div>
+      
+<div class="row">
+        <div class="col-sm-7">
+          <div class="well">
+            <h4><b>BOOK AN APPOINTMENT</b></h4>
+  <form>
+<! -- Drop down for doctors & departments -->
+    <label for="Department">Choose a department:</label>
+  <select name="Department" id="department">
+    <option value="Dentistry">Dentistry</option>
+    <option value="Pediatrics">Peadiatrics</option>
+    <option value="Gynae">Gynae</option>
+    <option value="Opthamology">Opthamology</option>
+    <option value="ENT">ENT</option>
+    <option value="Medicine/ General">Medicine/ General</option>
+ 
+  </select> <br/><br/>
+
+     <label for="Doctors available for OPD">Choose a department:</label>
+  <select name="OPD" id="OPD">
+    <option value="khursheed">Dr. Khursheed , Peadiatrics</option>
+    <option value="fatima">Dr. Fatima, Dentistry</option>
+    <option value="tayyaba">Dr. Tayyaba, Gynae</option>
+    <option value="Zia">Dr.Zia,Opthamology</option>
+    <option value="Omer">Dr. Omer,ENT</option>
+    <option value="Dr. Saleem">Dr. Saleem, Medicine/ General</option>
+  
+  </select> <br/><br/>
+ <center><button onclick="myFunction();">Look for available slots</button>
+</center>
+<div id="look">
+<br/>
+<p>You can book an appointment for next 5 days .</p>
+<! -- Drop down buttons -->
+
+ <div class="rowe">
+    <label for="Date/Day">Select Date/ Day</label>
+    <select name="Date" id="date">
+     <option value="Mon">Monday, 19 September 2022</option>
+     <option value="Tues">Tuesday, 20 September 2022</option>
+     <option value="Wed">Wednesday, 21 September 2022</option>
+     <option value="Thurs">Thursday, 22 September 2022</option>
+     <option value="Fri">Friday, 23 September 2022</option>
+     <option value="Sat">Saturday, 24 September 2022</option>
+    </select> 
+ </div>
+ <br/>
+  <div class="rowe">
+   <label for="Time">Select Time</label>
+   <select name="time" id="time">
+    <option value="first slot">4:00 to  4:15</option>
+    <option value="second slot">4:15 to  4:30</option>
+    <option value="Third slot">4:30 to  4:45</option>
+    <option value="Fifth slot">4:45 to  5:00</option>
+   </select>
+ </div> <br/>
+    <div class="rowe">
+<! -- Input data type  -->
+<label > Enter Your Name :</label>
+    <input type="text" id="name" name="entername" maxlength="50" style="width:60%"; display: inline-block; text-align:center; placeholder="Full Name" "> 
+</div>
+<br/> 
+<div class="rowe">
+    <label  for="mobile"> Mobile Number: </label>
+    <input type="tel" id="mobile" name="mobile" maxlength="11" style="width:50%" ;display: inline-block; text-align:center"; placeholder="03xx-xxxxxxx"; pattern="[0-9]{4}-[0-9]{7}" required "> 
+</div>
+<br/>
+<div class="rowe">
+      <label> Email:</label> 
+	<input type="email" id="email" name="email" maxlength="50" style="width:60%" ;display: inline-block; text-align:center"; placeholder="abc@email.com" "> 
+</div>
+<br>
+</form>
+<! -- Buttons -->
+<center>
+<button type="button" onclick="alert('Your appointment has been booked! You will recieve a confirmation message/ Email shortly')">Book an Appointement</button>
+&nbsp;&nbsp;&nbsp;<button onclick="document.location.href='clientdashboard.html'">Return to Homepage</button>
+</div>
+</center>
+
+</div>
+        </div>
+        
+        <div class="col-sm-5">
+          <div class="well">
+            <h4>Contact us</h4>
+            <p>042-37678677<br/>
+	042-37678678<br/>
+	042-37678679<br/> </p>
+	<h4>Email: </h4>
+	<p>customercare@shifainternational.com.pk</p>
+	<h4>Website: </h4>
+	<p>www.shifainteranational.com.pk<br/></p>
+	<h4>Instagram:</h4>
+	<p>shifainteranational<br/></p>
+	<h4>Facebook</h4>
+	<p>shifainteranational<br/></p>
+          </div>
+        </div>
+      </div>
+
+    
+  
+
+</body>
+</html>
